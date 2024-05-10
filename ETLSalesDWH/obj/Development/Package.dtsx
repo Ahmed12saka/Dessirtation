@@ -1,0 +1,1468 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/31/2024 4:05:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-0809NIQ"
+  DTS:CreatorName="DESKTOP-0809NIQ\HP"
+  DTS:DTSID="{0F5FA4BF-4153-45D5-953B-672F9700A6F8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{45B5DC88-A1A7-469E-857C-CFDE23E2F555}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ETLSalesDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CD8B396A-98A2-40DD-BBF9-CC88B099C5B7}"
+      DTS:ObjectName="ETLSalesDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-0809NIQ\MSSQLSERVER01;Initial Catalog=ETLSalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{CD8B396A-98A2-40DD-BBF9-CC88B099C5B7}DESKTOP-0809NIQ\MSSQLSERVER01.ETLSalesDWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{347EE02B-AF23-4F55-B544-F48F25E29219}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ETLSalesDWH\Sales Target\2022 Q1 Target feb.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BU"
+              DTS:DTSID="{89B2F7D2-0F8B-4520-897A-8E81E86D95AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Line"
+              DTS:DTSID="{B92A29F3-F195-4A07-AC85-7217C9052107}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="P G"
+              DTS:DTSID="{7553CF5D-B6CD-4F94-96D2-E2B3EA6C670A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{ACEF1C82-C6AB-4E54-98AA-3CB09CC088C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Governorate"
+              DTS:DTSID="{4E2FC93C-208B-4D69-B3F9-71CCAE6B7B41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Type"
+              DTS:DTSID="{C9E6E765-DAE6-406E-98F6-E3955D2B6E70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C G"
+              DTS:DTSID="{42E4FEA2-FE1B-4098-8CA6-77CD5B544696}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick"
+              DTS:DTSID="{D58D3160-BF29-4853-9715-FA78DB2E1875}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Definition"
+              DTS:DTSID="{8AA933E5-37BF-406C-BD9B-64BF7CD95770}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Address"
+              DTS:DTSID="{DEEAE026-E6F5-4B39-9707-EB2CB074F489}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DM"
+              DTS:DTSID="{11DD1B69-F8C8-4FF3-B2FD-04CB9C929C01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DM NAME"
+              DTS:DTSID="{DA17499A-242B-4958-AD95-6C442762B733}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MR"
+              DTS:DTSID="{FD784637-346A-4DE5-BD63-AD996A34C7C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MR NAME "
+              DTS:DTSID="{5CDB377D-814B-4A46-8840-A1C83C257FA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Share "
+              DTS:DTSID="{FE2F6121-3E6A-42FA-BF45-C3056A9145BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Target"
+              DTS:DTSID="{801DEB94-B2FE-4EE0-88E0-143F28F2BCED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{4BDDB356-3789-404F-B633-88AA70721469}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SalesFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4C9033B4-35A2-4FD0-9080-C57B566A6117}"
+      DTS:ObjectName="SalesFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SalesFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ETLSalesDWH\Sales\202110 Bricks.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Code"
+              DTS:DTSID="{464E0EF1-649B-49C2-9866-E25EC599B430}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Code"
+              DTS:DTSID="{0086E248-CCF6-4C85-8A80-30B95A726749}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Average Price"
+              DTS:DTSID="{9D3F8AE2-2A8B-4AC2-B1D7-E6CF55B81F9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales"
+              DTS:DTSID="{C93D4177-1BBC-4A97-9F64-2A654DB90236}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Bonus"
+              DTS:DTSID="{595B2A0C-20D3-41E0-9175-CA3500003E35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Returned Sales"
+              DTS:DTSID="{3EB1F67F-DF6A-4508-A21F-BC0A9EA782B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Returned Bonus"
+              DTS:DTSID="{B7DD42B7-35DD-4AFA-95A8-9115B1773AC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Actual Bonus"
+              DTS:DTSID="{6277F9CE-AD80-441E-89B9-0A7493B2B8A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Net Sales Volume"
+              DTS:DTSID="{223BB081-B15E-4D32-A00F-CA144DC03B23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Net Sales Value"
+              DTS:DTSID="{19EDF551-8053-4C5C-BB39-1156964F821D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{C131350C-3EDB-4225-8B58-AB1C089A9C36}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TargetFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4405865F-BAFF-4399-94EE-41CF882E91C3}"
+      DTS:ObjectName="TargetFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::TargetFilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ETLSalesDWH\Sales Target\2022 Q1 Target feb.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BU"
+              DTS:DTSID="{12BF09A0-FA9F-48D2-8175-CF04C71190E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Line"
+              DTS:DTSID="{1C23BB70-2373-4AA7-BE24-1019C40DE72A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="P G"
+              DTS:DTSID="{050E71C0-D4B3-43BD-9806-1C4101774634}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{42F483C3-FE83-4494-875C-BA7D4316D127}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Governorate"
+              DTS:DTSID="{290ECC7B-237D-4106-BA96-99B474DD7520}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Type"
+              DTS:DTSID="{A845E463-4D28-48FB-A026-A05EC3EDEEFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="C G"
+              DTS:DTSID="{199E12AE-34F4-4BB5-88D3-5E4BE972543D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick"
+              DTS:DTSID="{DE07B0B8-812F-4C7A-8A9A-4F557CFB3512}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Definition"
+              DTS:DTSID="{F863B37B-87A8-4E8A-A82B-CDBC9F59F1BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brick Address"
+              DTS:DTSID="{55D97253-C1D7-4228-B100-CD85708A2748}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DM"
+              DTS:DTSID="{ACFA1568-702A-4D82-84C9-77F7A9F8ABE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DM NAME"
+              DTS:DTSID="{1B4CA5C0-4BCE-4DF8-9E94-6A2BBD0C1073}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MR"
+              DTS:DTSID="{A6DD2B83-AFCD-4DF3-94D6-E50E5ACCB3EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MR NAME "
+              DTS:DTSID="{C8A04C25-CC30-450D-B154-AFC6F48D6BEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName=" Share "
+              DTS:DTSID="{696808DF-B320-4B19-9652-4C0798260191}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Target"
+              DTS:DTSID="{C960FE1D-30FF-4BD0-8236-0F2E75AE7637}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="date"
+              DTS:DTSID="{A4F382EA-B6C1-4204-98B3-DA3CE2DBCD19}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D30ED36C-3240-45C9-8CCF-7756A4C5C935}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SalesFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\ETLSalesDWH\Sales\202110 Bricks.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{384FEA64-D64A-4A6D-94CD-6BA5BE98368F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TargetFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\ETLSalesDWH\Sales Target\2022 Q1 Target feb.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sales"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{70932BBC-238F-4857-859D-C4314CD01703}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sales">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sales\Foreach File Loop Sales"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{DFEAE711-8193-4496-AB7E-AAA4C3AD5AA2}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Foreach File Loop Sales">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.ForEachFileEnumerator"
+            DTS:DTSID="{73B34DAB-40FA-480B-8F00-FC4C2316A02B}"
+            DTS:ObjectName="{73B34DAB-40FA-480B-8F00-FC4C2316A02B}">
+            <DTS:ObjectData>
+              <ForEachFileEnumeratorProperties>
+                <FEFEProperty
+                  Folder="C:\ETLSalesDWH\Sales" />
+                <FEFEProperty
+                  FileSpec="*.csv" />
+                <FEFEProperty
+                  FileNameRetrievalType="0" />
+                <FEFEProperty
+                  Recurse="0" />
+              </ForEachFileEnumeratorProperties>
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Sales\Foreach File Loop Sales\Load Salse"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{C3F26521-4DBB-446C-892B-2815981D4B41}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Load Salse"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column"
+                      componentClassID="Microsoft.DerivedColumn"
+                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                      name="Derived Column"
+                      usesDispositions="true">
+                      <inputs>
+                        <input
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Inputs[Derived Column Input]"
+                          description="Input to the Derived Column Transformation"
+                          name="Derived Column Input">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Output]"
+                          description="Default Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          name="Derived Column Output"
+                          synchronousInputId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Output].Columns[FilePath]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              length="255"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Output].Columns[FilePath]"
+                              name="FilePath"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">(DT_WSTR,255)@[User::SalesFilePath]</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">(DT_WSTR,255)@[User::SalesFilePath]</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                        <output
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Error Output]"
+                          description="Error Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Derived Column Error Output"
+                          synchronousInputId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv"
+                      componentClassID="Microsoft.FlatFileSource"
+                      contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Flat File Source"
+                      localeId="1033"
+                      name="Sales Csv"
+                      usesDispositions="true"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Specifies whether zero-length columns are treated as null."
+                          name="RetainNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                          name="FileNameColumnName"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Connections[FlatFileConnection]"
+                          connectionManagerID="Package.ConnectionManagers[SalesFile]"
+                          connectionManagerRefId="Package.ConnectionManagers[SalesFile]"
+                          name="FlatFileConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output]"
+                          name="Flat File Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Brick Code]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Brick Code]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Brick Code]"
+                              name="Brick Code"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Product Code]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Product Code]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Product Code]"
+                              name="Product Code"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Average Price]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Average Price]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Average Price]"
+                              name="Average Price"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Sales]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Sales]"
+                              name="Sales"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Bonus]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Bonus]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Bonus]"
+                              name="Bonus"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Returned Sales]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Returned Sales]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Returned Sales]"
+                              name="Returned Sales"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Returned Bonus]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Returned Bonus]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Returned Bonus]"
+                              name="Returned Bonus"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Actual Bonus]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Actual Bonus]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Actual Bonus]"
+                              name="Actual Bonus"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Net Sales Volume]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Net Sales Volume]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Net Sales Volume]"
+                              name="Net Sales Volume"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Net Sales Value]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Net Sales Value]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Net Sales Value]"
+                              name="Net Sales Value"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[date]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[date]"
+                              length="50"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[date]"
+                              name="date"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Brick Code]"
+                              dataType="wstr"
+                              length="50"
+                              name="Brick Code" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Product Code]"
+                              dataType="wstr"
+                              length="50"
+                              name="Product Code" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Average Price]"
+                              dataType="wstr"
+                              length="50"
+                              name="Average Price" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Sales]"
+                              dataType="wstr"
+                              length="50"
+                              name="Sales" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Bonus]"
+                              dataType="wstr"
+                              length="50"
+                              name="Bonus" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Returned Sales]"
+                              dataType="wstr"
+                              length="50"
+                              name="Returned Sales" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Returned Bonus]"
+                              dataType="wstr"
+                              length="50"
+                              name="Returned Bonus" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Actual Bonus]"
+                              dataType="wstr"
+                              length="50"
+                              name="Actual Bonus" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Net Sales Volume]"
+                              dataType="wstr"
+                              length="50"
+                              name="Net Sales Volume" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[Net Sales Value]"
+                              dataType="wstr"
+                              length="50"
+                              name="Net Sales Value" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].ExternalColumns[date]"
+                              dataType="wstr"
+                              length="50"
+                              name="date" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output]"
+                          isErrorOut="true"
+                          name="Flat File Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              dataType="nText"
+                              description="Flat File Source Error Output Column"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              name="Flat File Source Error Output Column" />
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="OLE DB Destination"
+                      name="StageSales"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[StageSales]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepIdentity">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                          name="FastLoadOptions"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Connections[OleDbConnection]"
+                          connectionManagerID="Package.ConnectionManagers[ETLSalesDWH]"
+                          connectionManagerRefId="Package.ConnectionManagers[ETLSalesDWH]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input]"
+                          errorOrTruncationOperation="Insert"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="OLE DB Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Brick Code]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Brick Code"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Brick Code]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Brick Code]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Product Code]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Product Code"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Product Code]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Product Code]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Average Price]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Average Price"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Average Price]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Average Price]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Sales]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Sales"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Sales]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Bonus]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Bonus"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Bonus]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Bonus]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Returned Sales]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Returned Sales"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Returned Sales]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Returned Sales]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Returned Bonus]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Returned Bonus"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Returned Bonus]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Returned Bonus]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Actual Bonus]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Actual Bonus"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Actual Bonus]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Actual Bonus]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Net Sales Volume]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Net Sales Volume"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Net Sales Volume]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Net Sales Volume]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[Net Sales Value]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="Net Sales Value"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Net Sales Value]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[Net Sales Value]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[date]"
+                              cachedDataType="wstr"
+                              cachedLength="50"
+                              cachedName="date"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output].Columns[date]" />
+                            <inputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].Columns[FilePath]"
+                              cachedDataType="wstr"
+                              cachedLength="255"
+                              cachedName="FilePath"
+                              externalMetadataColumnId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Output].Columns[FilePath]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Brick Code]"
+                              dataType="wstr"
+                              length="50"
+                              name="Brick Code" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Product Code]"
+                              dataType="wstr"
+                              length="50"
+                              name="Product Code" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Average Price]"
+                              dataType="wstr"
+                              length="50"
+                              name="Average Price" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Sales]"
+                              dataType="wstr"
+                              length="50"
+                              name="Sales" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Bonus]"
+                              dataType="wstr"
+                              length="50"
+                              name="Bonus" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Returned Sales]"
+                              dataType="wstr"
+                              length="50"
+                              name="Returned Sales" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Returned Bonus]"
+                              dataType="wstr"
+                              length="50"
+                              name="Returned Bonus" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Actual Bonus]"
+                              dataType="wstr"
+                              length="50"
+                              name="Actual Bonus" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Net Sales Volume]"
+                              dataType="wstr"
+                              length="50"
+                              name="Net Sales Volume" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[Net Sales Value]"
+                              dataType="wstr"
+                              length="50"
+                              name="Net Sales Value" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[date]"
+                              dataType="wstr"
+                              length="50"
+                              name="date" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[ETLDate]"
+                              dataType="dbTimeStamp"
+                              name="ETLDate" />
+                            <externalMetadataColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input].ExternalColumns[SourceFile]"
+                              dataType="wstr"
+                              length="255"
+                              name="SourceFile" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Outputs[OLE DB Destination Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="OLE DB Destination Error Output"
+                          synchronousInputId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Sales\Foreach File Loop Sales\Load Salse.Paths[Derived Column Output]"
+                      endId="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales.Inputs[OLE DB Destination Input]"
+                      name="Derived Column Output"
+                      startId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Outputs[Derived Column Output]" />
+                    <path
+                      refId="Package\Sales\Foreach File Loop Sales\Load Salse.Paths[Flat File Source Output]"
+                      endId="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column.Inputs[Derived Column Input]"
+                      name="Flat File Source Output"
+                      startId="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv.Outputs[Flat File Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{70AB51D3-D147-4CC1-B534-1FA40F0CB47D}"
+              DTS:ObjectName="{70AB51D3-D147-4CC1-B534-1FA40F0CB47D}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::SalesFilePath" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sales\Truncate Table StageSales"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{8DA49326-C027-404E-AAB9-ED2610A8FA5A}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Table StageSales"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{CD8B396A-98A2-40DD-BBF9-CC88B099C5B7}"
+              SQLTask:SqlStatementSource="Truncate Table StageSales" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sales.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{379383CB-CC22-4FC9-9A0A-D2AC85AA1B7B}"
+          DTS:From="Package\Sales\Truncate Table StageSales"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sales\Foreach File Loop Sales" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="204,41.6"
+          Id="Package\Sales\Truncate Table StageSales"
+          TopLeft="32.9999984974662,10.69999996384" />
+        <EdgeLayout
+          Id="Package\Sales.PrecedenceConstraints[Constraint]"
+          TopLeft="137.383331853565,52.29999996384">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.2666661182376"
+              Start="0,0"
+              End="0,29.7666661182376">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7666661182376" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130.4,41.6"
+          Id="Package\Sales\Foreach File Loop Sales\Load Salse"
+          TopLeft="33.8333317852684,33.3999989332755" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="215.2,128"
+          Size="215.2,171.2"
+          Id="Package\Sales\Foreach File Loop Sales"
+          TopLeft="32.1666652096644,89.5666660820776" />
+        <ContainerLayout
+          HeaderHeight="43.2"
+          IsExpanded="True"
+          PanelSize="276,316"
+          Size="276,359.2"
+          Id="Package\Sales"
+          TopLeft="227.900003688037,99.7999993671973" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sales\Foreach File Loop Sales\Load Salse">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\Sales\Foreach File Loop Sales\Load Salse\Sales Csv"
+          TopLeft="234.166653872365,71.9333328331179" />
+        <NodeLayout
+          Size="132,41.6"
+          Id="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales"
+          TopLeft="400.833311432766,170.733332146075" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Sales\Foreach File Loop Sales\Load Salse\Derived Column"
+          TopLeft="176.666657014026,137.799999041756" />
+        <EdgeLayout
+          Id="Package\Sales\Foreach File Loop Sales\Load Salse.Paths[Flat File Source Output]"
+          TopLeft="296.566653872365,113.533332833118">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43.4999968583387,24.2666662086381"
+              Start="0,0"
+              End="-43.4999968583387,16.7666662086381">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.13333310431905" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.13333310431905"
+                    Point2="0,12.133333104319"
+                    Point3="-4,12.133333104319" />
+                  <mssgle:LineSegment
+                    End="-39.4999968583387,12.133333104319" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.4999968583387,12.133333104319"
+                    Point2="-43.4999968583387,12.133333104319"
+                    Point3="-43.4999968583387,16.133333104319" />
+                  <mssgle:LineSegment
+                    End="-43.4999968583387,16.7666662086381" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sales\Foreach File Loop Sales\Load Salse.Paths[Derived Column Output]"
+          TopLeft="329.466657014026,158.599999041756">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.3666544187404,32.933333104319"
+              Start="0,0"
+              End="63.8666544187404,32.933333104319">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="31.6833272093702,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.6833272093702,0"
+                    Point2="35.6833272093702,0"
+                    Point3="35.6833272093702,4" />
+                  <mssgle:LineSegment
+                    End="35.6833272093702,28.933333104319" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.6833272093702,28.933333104319"
+                    Point2="35.6833272093702,32.933333104319"
+                    Point3="39.6833272093702,32.933333104319" />
+                  <mssgle:LineSegment
+                    End="63.8666544187404,32.933333104319" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sales\Foreach File Loop Sales\Load Salse\StageSales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
